@@ -18,7 +18,7 @@ import { fotterStyles as styles } from './fotterStyles';
 const FotterTitle = (props) => (
   <>
     <View style={styles.fotterTitleContainer}>
-      <Text style={styles.footerTitleText}>{props.fotterTitle}</Text>
+      <Text style={styles.fotterTitleText}>{props.fotterTitle}</Text>
     </View>
   </>
 )

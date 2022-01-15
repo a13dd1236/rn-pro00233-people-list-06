@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { StyleSheet, Platform, StatusBar } from 'react-native';
 import { SafeAreaView, View, Text } from 'react-native';
-
 // import Constants from 'expo-constants';
 
 // Imported npm javascript modules:
@@ -23,7 +22,7 @@ const appStyles = StyleSheet.create({
     //    Constants from 'expo-constants';
     // paddingTop: Platform.OS === "android" ? Constants.statusBarHeight: 0,
     //    StatusBar from 'react-native'
-    paddingTop: Platform.OS === 'android' ? 0 : 0,
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
     flex: 1,
     justifyContent: 'flex-start',
     backgroundColor: 'skyblue',
@@ -49,10 +48,9 @@ const App = () => {
   return (
     <SafeAreaView style={styles.appContainer}>
       <View style={styles.headerTitleContainer}>
-        <Text style={styles.headerTitleText}>People List v03</Text></View>
-
+        <Text style={styles.headerTitleText}>People List v03</Text>
+      </View>
     </SafeAreaView>
   );
 };
-
 export default App;

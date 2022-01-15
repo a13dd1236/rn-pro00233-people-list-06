@@ -7,6 +7,7 @@ import { View, Text } from 'react-native';
 // Imported local files:
 import { Header } from '../index';
 import { Body } from '../index';
+import { Fotter } from '../index';
 
 // Imported Styles:
 import { mainAppStyles as styles } from './mainAppStyles';
@@ -19,6 +20,7 @@ const MainApp = () => {
     <>
       <Header />
       <Body />
+      <Fotter />
     </>
   );
 };

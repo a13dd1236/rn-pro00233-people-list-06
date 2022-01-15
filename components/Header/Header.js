@@ -1,11 +1,10 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 // import Constants from 'expo-constants';
 
 // Imported npm javascript modules:
 
 // Imported local files:
-// import { New } from '../components/index';
 
 // Imported Styles:
 import { headerStyles as styles } from './headerStyles';
@@ -13,13 +12,37 @@ import { headerStyles as styles } from './headerStyles';
 // const styles = {
 //   ...headerStyles,
 // };
+
+// Sub Components:
+
+// HeaderMenu:
+const HeaderMenu = () => (
+  <>
+    <View style={styles.headerMenuContainer}>
+      <Text style={styles.headerMenuText}>Menu</Text>
+      <Image
+        style={styles.headerMenuLogoContainer}
+        source={require('../../assets/Icon-Menu.png')}
+      />
+    </View>
+  </>
+)
+
+// HeaderTitle:
+const HeaderTitle = () => (
+  <>
+    <View style={styles.headerTitleContainer}>
+      <Text style={styles.headerTitleText}>People List - v06</Text>
+    </View>
+  </>
+)
 const Header = () => {
   return (
     <>
+      {/** Container - Header */}
       <View style={styles.headerContainer}>
-        <View style={styles.headerTitleContainer}>
-          <Text style={styles.headerTitleText}>People List v06</Text>
-        </View>
+        <HeaderMenu />
+        <HeaderTitle appTitle={"People List - v06"} />
       </View>
     </>
   );

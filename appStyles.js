@@ -21,13 +21,21 @@ const appStyles = StyleSheet.create({
     justifyContent: 'flex-start',
     backgroundColor: 'skyblue',
   },
-  headerTitleContainer: {
+  headerContainer: {
     margin: 1,
-    borderColor: 'red',
+    borderColor: '#adff2f',
     padding: 1,
     borderWidth: 3,
     justifyContent: 'center',
-    backgroundColor: 'skyblue',
+    backgroundColor: '#006400',
+  },
+  headerTitleContainer: {
+    margin: 1,
+    borderColor: '#e9ffdb',
+    padding: 1,
+    borderWidth: 3,
+    justifyContent: 'center',
+    backgroundColor: '#a3c1ad',
   },
   headerTitleText: {
     fontSize: 18,
@@ -38,5 +46,7 @@ const appStyles = StyleSheet.create({
 const styles = {
   ...appStyles,
 };
+
+export { styles, styles as appStyles };
 
 export default styles;

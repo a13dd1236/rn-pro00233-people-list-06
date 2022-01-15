@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SafeAreaView, View, Text } from 'react-native';
+import { SafeAreaView } from 'react-native';
 // import Constants from 'expo-constants';
 
 // Imported npm javascript modules:

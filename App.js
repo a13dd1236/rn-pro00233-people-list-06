@@ -5,6 +5,7 @@ import { SafeAreaView, View, Text } from 'react-native';
 // Imported npm javascript modules:
 
 // Imported local files:
+import MainApp from './components/index';
 import { New } from './components/index';
 // Imported Styles:
 import { appStyles as styles } from './appStyles';
@@ -15,11 +16,7 @@ import { appStyles as styles } from './appStyles';
 const App = () => {
   return (
     <SafeAreaView style={styles.appContainer}>
-      <View style={styles.headerContainer}>
-        <View style={styles.headerTitleContainer}>
-          <Text style={styles.headerTitleText}>People List v03</Text>
-        </View>
-      </View>
+      <MainApp />
       <New />
     </SafeAreaView>
   );

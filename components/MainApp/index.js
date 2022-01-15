@@ -1,6 +1,4 @@
 import MainApp from './MainApp';
-import New from './New';
 
-export { New, MainApp };
+export { MainApp };
 export default MainApp;
-

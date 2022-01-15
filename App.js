@@ -1,21 +1,58 @@
 import * as React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Platform, StatusBar } from 'react-native';
+import { SafeAreaView, View, Text } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>People List - v06</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+// import Constants from 'expo-constants';
 
-const styles = StyleSheet.create({
-  container: {
+// Imported npm javascript modules:
+
+// Imported local files:
+
+// Imported Styles:
+
+// Styles:
+const appStyles = StyleSheet.create({
+  appContainer: {
+    margin: 3,
+    borderColor: 'red',
+    padding: 3,
+    borderWidth: 3,
+    // Solving Android SafeAreaView Not Supported
+    // (For iOS Use <SafeAreaView></SafeAreaView>)
+    // Both Solution:
+    //    Constants from 'expo-constants';
+    // paddingTop: Platform.OS === "android" ? Constants.statusBarHeight: 0,
+    //    StatusBar from 'react-native'
+    paddingTop: Platform.OS === 'android' ? 0 : 0,
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+    justifyContent: 'flex-start',
+    backgroundColor: 'skyblue',
+  },
+  headerTitleContainer: {
+    margin: 1,
+    borderColor: 'red',
+    padding: 1,
+    borderWidth: 3,
     justifyContent: 'center',
+    backgroundColor: 'skyblue',
+  },
+  headerTitleText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
+const styles = {
+  ...appStyles,
+};
+const App = () => {
+  return (
+    <SafeAreaView style={styles.appContainer}>
+      <View style={styles.headerTitleContainer}>
+        <Text style={styles.headerTitleText}>People List v03</Text></View>
+
+    </SafeAreaView>
+  );
+};
+
+export default App;
